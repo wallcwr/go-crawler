@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+//创建目录
 func MakeDir(dir string) error {
 	err := os.MkdirAll(dir, os.ModePerm)
 	if err != nil {
@@ -14,6 +15,7 @@ func MakeDir(dir string) error {
 	return nil
 }
 
+// 保存文件
 func Save(file []byte, fileName string)  error {
 	err := ioutil.WriteFile(fileName, file, os.ModePerm)
 	if err != nil {

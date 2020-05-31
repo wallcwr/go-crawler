@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+//从指定的url下载html页面信息
 func Load(url string, method string) (*goquery.Document,error) {
 	client := http.Client{}
 	req, err := http.NewRequest(method, url, nil)
@@ -27,7 +28,4 @@ func Load(url string, method string) (*goquery.Document,error) {
 	}
 	return doc, nil
 }
-//func NewLoader() *loader {
-//	return new(loader)
-//}
 

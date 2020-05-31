@@ -43,10 +43,6 @@ func parse(docs *goquery.Document) []info {
 		}
 		go func() {
 			defer wg.Done()
-			//doc.Find("div#dale_movie_subject_top_icon").Each(func(i int, selection *goquery.Selection) {
-			//	pageInfos[index].text = selection.Text()
-			//	println(selection.Text())
-			//})
 			doc.Find("div#info").Each(func(i int, selection *goquery.Selection) {
 				pageInfos[index].text += selection.Text()
 			})
